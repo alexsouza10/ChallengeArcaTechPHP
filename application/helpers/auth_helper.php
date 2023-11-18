@@ -5,7 +5,7 @@ function permission()
 {
 	$ci = get_instance();
 	$loggedUser = $ci->session->userdata("logged_user");
-	if ($loggedUser) {
+	if (!$loggedUser) {
 		$ci->session->set_flashData("danger", "Você precisa estar logado para acessar esta página!");
 		redirect("login");
 	}

@@ -49,7 +49,7 @@
     </label>
   </div>
 	<p>
-		<a href="">Don't Have an Account?</a>
+		<a href="<?= base_url() ?>signup">Don't Have an Account?</a>
 	</p>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>

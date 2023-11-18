@@ -53,7 +53,7 @@
 	<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 	
 	<p>
-		<a href="">Already Have an Account?</a>
+		<a href="<?= base_url() ?>login">Already Have an Account?</a>
 	</p>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>

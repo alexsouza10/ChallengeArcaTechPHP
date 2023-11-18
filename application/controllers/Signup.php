@@ -11,13 +11,12 @@ class Signup extends CI_Controller
 	}
 	public function store()
 	{
-
 		$this->load->model('users_model');
 		$user = array(
 			"name" => $_POST["name"],
 			"country" => $this->input->post("country"),
 			"email" => $_POST["email"],
-			"password" => md5($_POST["password"])
+			"password" => md5($_POST["password"]);
 		);
 		$this->users_model->store($user);
 		redirect("login");

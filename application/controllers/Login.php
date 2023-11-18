@@ -3,12 +3,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Login extends CI_Controller
 {
+
+
 	public function index()
 	{
 		$data["title"] = "Login - CodeIgniter";
 		$this->load->view('pages/login', $data);
 
 	}
+
 	public function store()
 	{
 		$this->load->model('login_model');
@@ -19,8 +22,8 @@ class Login extends CI_Controller
 		if($user) {
 			$this->session->set_userdata("logged_user", $user);
 			redirect("dashboard");
-		}else {
-			redirect("login");
+		} else {
+			redirect("dashboard");	
 		}
 	}
 

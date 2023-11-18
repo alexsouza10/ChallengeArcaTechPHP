@@ -49,7 +49,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?= base_url() ?>cepcontroller">
+						<a class="nav-link" href="<?= base_url() ?>cep">
 							<span data-feather="file"></span>
 							Busca CEP
 						</a>

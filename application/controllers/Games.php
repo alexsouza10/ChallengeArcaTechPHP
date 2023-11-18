@@ -7,6 +7,7 @@ class Games extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		permission();
 		$this->load->model('games_model');
 
 	}
@@ -15,7 +16,6 @@ class Games extends CI_Controller
 	{
 		$data["games"] = $this->games_model->index();
 		$data["title"] = "Games - CodeIgniter";
-
 		$this->load->view("templates/header", $data);
 		$this->load->view("templates/nav-top", $data);
 		$this->load->view('pages/games', $data);

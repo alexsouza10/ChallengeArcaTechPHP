@@ -48,6 +48,12 @@
 							My Games
 						</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?= base_url() ?>cepcontroller">
+							<span data-feather="file"></span>
+							Busca CEP
+						</a>
+					</li>
 				</ul>
 			</div>
 		</nav>

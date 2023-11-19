@@ -1,21 +1,32 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="stylesheet" href="xci-estrutura-inicial-master/07-consumoAPI/style.css">
 
-$address = (object) [
-	'cep' => '',
-	'logradouro' => '',
-	'bairro' => '',
-	'localidade' => '', 
-	'uf'=> ''
-];
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Busca CEP</title>
+</head>
 
-if (isset($_POST["cep"])) {
-    $cep = $_POST['cep'];
+<body>
+	<form action="<?= base_url('index.php/cep/consulta') ?>" method="post">
+		<p>Digite o CEP para encontrar o endereço.</p>
+		<input type="text" placeholder="Digite um cep..." name="cep" value="<?= $address->cep ?>">
+		
 
-	$cep = preg_replace('/[^0-9]/',' ',$cep );
-	if ( preg_match('/^[0-9]{5}-?[0-9]{3}$/', $cep) ) {
+		<label for="rua">Rua:</label>
+		<input type="text" placeholder="Rua" name="rua" value="<?= $address->logradouro ?>">
 
-    $url = "https://viacep.com.br/ws/{$cep}/json/";
+		<label for="bairro">Bairro:</label>
+		<input type="text" placeholder="Bairro" name="bairro" value="<?= $address->bairro ?>">
 
-	$address = json_decode(file_get_contents($url));
-}
-}
+		<label for="cidade">Cidade:</label>
+		<input type="text" placeholder="Cidade" name="cidade" value="<?= $address->localidade ?>">
+
+		<label for="estado">Estado:</label>
+		<input type="text" placeholder="Estado" name="estado" value="<?= $address->uf ?>">
+		<input type="submit" value="Return">
+	</form>
+</body>
+
+</html>

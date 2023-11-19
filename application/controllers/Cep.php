@@ -16,19 +16,20 @@ include("application/views/pages/viacep.php");
 	<form action="." method="post">
 		<p>Digite o CEP para encontrar o endereço.</p>
 		<input type="text" placeholder="Digite um cep..." name="cep" value="<?= $address->cep ?>">
-		<input type="submit">
+		
 
-		<label for="rua">Rua:</label>
+		<label id="rua">Rua:</label>
 		<input type="text" placeholder="Rua" name="rua" value="<?= $address->logradouro ?>">
 
-		<label for="bairro">Bairro:</label>
+		<label id="bairro">Bairro:</label>
 		<input type="text" placeholder="Bairro" name="bairro" value="<?= $address->bairro ?>">
 
-		<label for="cidade">Cidade:</label>
+		<label id="cidade">Cidade:</label>
 		<input type="text" placeholder="Cidade" name="cidade" value="<?= $address->localidade ?>">
 
-		<label for="estado">Estado:</label>
+		<label id="estado">Estado:</label>
 		<input type="text" placeholder="Estado" name="estado" value="<?= $address->uf ?>">
+		<input type="submit" value="Return">
 	</form>
 
 </body>

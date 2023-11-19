@@ -24,11 +24,10 @@
 		</br>
 		<label for="estado">Estado:</label>
 		<input type="text" placeholder="Estado" name="estado" value="<?= $address->uf ?>">
+		
 		</br>
 		<input type="submit" value="Return">
 		</br>
-		<form action="<?= base_url('/') ?>" method="post">
-		<input type="submit" value="Return"><span></span>
 	</form>
 </body>
 
